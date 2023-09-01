@@ -77,3 +77,14 @@ prevBtn.addEventListener('click', function() {
     }
     showPerson(currentItem);
 });
+
+// Show random person
+randomBtn.addEventListener('click', function() {
+    currentItem = getRandomNumber();
+    showPerson(currentItem);
+    console.log(getRandomNumber());
+});
+
+function getRandomNumber() {
+    return Math.floor(Math.random() * reviews.length);
+}
