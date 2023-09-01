@@ -82,7 +82,6 @@ prevBtn.addEventListener('click', function() {
 randomBtn.addEventListener('click', function() {
     currentItem = getRandomNumber();
     showPerson(currentItem);
-    console.log(getRandomNumber());
 });
 
 function getRandomNumber() {
