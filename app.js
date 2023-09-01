@@ -60,3 +60,20 @@ function showPerson(person) {
 };
 
 // Show next person
+nextBtn.addEventListener('click', function() {
+    currentItem++;
+    //reviews.length is 4, we need it to be smaller than 4
+    if(currentItem > reviews.length - 1) {
+        currentItem = 0;
+    }
+    showPerson(currentItem);
+});
+
+// Show prev person
+prevBtn.addEventListener('click', function() {
+    currentItem--;
+    if(currentItem < 0) {
+        currentItem = reviews.length - 1;
+    }
+    showPerson(currentItem);
+});
